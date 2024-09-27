@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Infrastructure.Identity;
 
 namespace Infrastructure.Data.DbContexts
 {
-    public class ShelfieDbContext : DbContext
+    public class ShelfieDbContext : IdentityDbContext<ApplicationUser>
     {
         public ShelfieDbContext(DbContextOptions<ShelfieDbContext> options):base(options) { }
 

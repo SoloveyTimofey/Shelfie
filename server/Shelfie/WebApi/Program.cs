@@ -1,3 +1,4 @@
+using Infrastructure;
 using Infrastructure.Data.DbContexts;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,7 +10,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//Assembly.GetExecutingAssembly().GetName().Name)
+
 builder.Services.AddDbContext<ShelfieDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ShelfieConnection"),
@@ -17,7 +18,7 @@ builder.Services.AddDbContext<ShelfieDbContext>(options =>
 
 });
 
-//DependencyInjection.AddInfrastructureDbContext(builder.Services, builder.Configuration["ConnectionStrings:ShelfieConnection"]!);
+InfrastructureServicesRegistration.RegisterInfrastructureServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 
