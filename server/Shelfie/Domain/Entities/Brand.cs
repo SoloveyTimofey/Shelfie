@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Brand
+    public class Brand : BaseEntity
     {
-        public long Id { get; set; }
         public string Name { get; set; } = null!;
 
         public IEnumerable<InventoryItem> InventoryItems { get; set; } = [];

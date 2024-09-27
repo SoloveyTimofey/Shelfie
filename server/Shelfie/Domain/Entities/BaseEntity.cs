@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Enums
+namespace Domain.Entities
 {
-    public enum InventoryItemStatus
+    public abstract class BaseEntity
     {
-        SentToService,
-        Removed
+        public long Id { get; set; }
     }
 }

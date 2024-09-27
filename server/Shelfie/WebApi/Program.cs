@@ -1,3 +1,6 @@
+using Infrastructure.Data.DbContexts;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,15 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//Assembly.GetExecutingAssembly().GetName().Name)
+builder.Services.AddDbContext<ShelfieDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ShelfieConnection"),
+        b => b.MigrationsAssembly("WebApi"));
+
+});
+
+//DependencyInjection.AddInfrastructureDbContext(builder.Services, builder.Configuration["ConnectionStrings:ShelfieConnection"]!);
 
 var app = builder.Build();
 
