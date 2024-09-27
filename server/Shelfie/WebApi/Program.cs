@@ -11,12 +11,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ShelfieDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ShelfieConnection"),
-        b => b.MigrationsAssembly("WebApi"));
+//builder.Services.AddDbContext<ShelfieDbContext>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("ShelfieConnection"),
+//        b => b.MigrationsAssembly("Shelfie.WebApi"));
 
-});
+//});
 
 InfrastructureServicesRegistration.AddInfrastructureServices(builder.Services, builder.Configuration);
 

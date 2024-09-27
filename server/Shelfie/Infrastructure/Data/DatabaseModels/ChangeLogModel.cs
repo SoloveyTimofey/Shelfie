@@ -1,8 +1,8 @@
-﻿namespace Shelfie.Domain.ValueObjects
+﻿namespace Shelfie.Infrastructure.Data.DatabaseModels
 {
-    public class ChangeLog
+    public class ChangeLogModel
     {
-        public ChangeLog(DateTime changeTime, string changeMessage)
+        public ChangeLogModel(DateTime changeTime, string changeMessage)
         {
             this.ChangeMessage = changeMessage;
             this.ChangeTime = changeTime;
