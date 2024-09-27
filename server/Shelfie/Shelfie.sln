@@ -3,19 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{0D01D842-3215-48F7-8AB4-F3D6E4E0E2C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shelfie.Domain", "Domain\Shelfie.Domain.csproj", "{0D01D842-3215-48F7-8AB4-F3D6E4E0E2C3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{C972C710-C470-46DF-9180-A9D0A7923118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shelfie.Application", "Application\Shelfie.Application.csproj", "{C972C710-C470-46DF-9180-A9D0A7923118}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{892CB907-D88B-4A2B-AE8F-DA7E5C7C444D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shelfie.Infrastructure", "Infrastructure\Shelfie.Infrastructure.csproj", "{892CB907-D88B-4A2B-AE8F-DA7E5C7C444D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{18829391-5E29-4FFA-AC5F-B34A9FB1A835}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{2B6705DB-0457-46FC-9CD3-E7DD56C29CCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shelfie.WebApi", "WebApi\Shelfie.WebApi.csproj", "{18829391-5E29-4FFA-AC5F-B34A9FB1A835}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F5C18E3C-3DD0-4547-A88C-999B8D0A5C0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.UnitTests", "Domain.UnitTests\Domain.UnitTests.csproj", "{7B54D360-7A8C-4A7A-A68C-3F42C666F9D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.UnitTests", "Domain.UnitTests\Domain.UnitTests.csproj", "{7B54D360-7A8C-4A7A-A68C-3F42C666F9D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{499814DC-5B7D-42BA-A10B-5ACA61F1CD7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3BA32E2F-E89C-46F1-8FF3-E52009F22276}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{492EA29C-9240-4F08-8FDF-4D267D611FE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{0D01D842-3215-48F7-8AB4-F3D6E4E0E2C3} = {499814DC-5B7D-42BA-A10B-5ACA61F1CD7C}
+		{C972C710-C470-46DF-9180-A9D0A7923118} = {499814DC-5B7D-42BA-A10B-5ACA61F1CD7C}
+		{892CB907-D88B-4A2B-AE8F-DA7E5C7C444D} = {3BA32E2F-E89C-46F1-8FF3-E52009F22276}
+		{18829391-5E29-4FFA-AC5F-B34A9FB1A835} = {492EA29C-9240-4F08-8FDF-4D267D611FE3}
 		{7B54D360-7A8C-4A7A-A68C-3F42C666F9D7} = {F5C18E3C-3DD0-4547-A88C-999B8D0A5C0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

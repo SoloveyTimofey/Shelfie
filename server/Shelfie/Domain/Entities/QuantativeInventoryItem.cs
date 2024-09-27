@@ -1,6 +1,7 @@
-﻿using Domain.Enums;
+﻿using Shelfie.Domain.Enums;
 
-namespace Domain.Entities
+
+namespace Shelfie.Domain.Entities
 {
     public class QuantativeInventoryItem : InventoryItem
     {

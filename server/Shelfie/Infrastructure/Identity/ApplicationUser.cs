@@ -1,7 +1,7 @@
-﻿using Application.Common.Interfaces;
+﻿using Shelfie.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Identity;
 
-namespace Infrastructure.Identity
+namespace Shelfie.Infrastructure.Identity
 {
     public class ApplicationUser : IdentityUser, IUser
     {

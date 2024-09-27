@@ -1,9 +1,9 @@
-﻿using Infrastructure.Data.DbContexts;
+﻿using Shelfie.Infrastructure.Data.DbContexts;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace Infrastructure
+namespace Shelfie.Infrastructure
 {
     public static class InfrastructureServicesRegistration
     {

@@ -1,5 +1,5 @@
-using Infrastructure;
-using Infrastructure.Data.DbContexts;
+using Shelfie.Infrastructure;
+using Shelfie.Infrastructure.Data.DbContexts;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +18,7 @@ builder.Services.AddDbContext<ShelfieDbContext>(options =>
 
 });
 
-InfrastructureServicesRegistration.RegisterInfrastructureServices(builder.Services, builder.Configuration);
+InfrastructureServicesRegistration.AddInfrastructureServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 

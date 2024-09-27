@@ -1,7 +1,7 @@
-﻿using Domain.Entities;
-using Microsoft.AspNetCore.JsonPatch;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using Shelfie.Domain.Entities;
 
-namespace Application.Common.Interfaces
+namespace Shelfie.Application.Common.Interfaces
 {
 	public interface IRepository
 	{

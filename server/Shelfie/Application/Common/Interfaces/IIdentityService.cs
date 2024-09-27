@@ -1,11 +1,6 @@
-﻿using Application.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Shelfie.Application.Common.Models;
 
-namespace Application.Common.Interfaces
+namespace Shelfie.Application.Common.Interfaces
 {
     public interface IIdentityService
     {

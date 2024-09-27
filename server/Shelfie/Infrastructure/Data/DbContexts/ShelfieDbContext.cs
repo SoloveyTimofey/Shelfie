@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Domain.Entities;
-using Microsoft.EntityFrameworkCore.Design;
+using Shelfie.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Infrastructure.Identity;
+using Shelfie.Infrastructure.Identity;
 
-namespace Infrastructure.Data.DbContexts
+namespace Shelfie.Infrastructure.Data.DbContexts
 {
     public class ShelfieDbContext : IdentityDbContext<ApplicationUser>
     {

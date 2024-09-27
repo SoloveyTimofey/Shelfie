@@ -1,7 +1,7 @@
-﻿using Domain.Enums;
-using Domain.ValueObjects;
+﻿using Shelfie.Domain.Enums;
+using Shelfie.Domain.ValueObjects;
 
-namespace Domain.Entities
+namespace Shelfie.Domain.Entities
 {
     public class InventoryItem : BaseEntity
     {

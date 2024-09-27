@@ -1,3 +1,3 @@
 global using NUnit.Framework;
-global using Domain.Entities;
-global using Domain.Enums;
+global using Shelfie.Domain.Entities;
+global using Shelfie.Domain.Enums;

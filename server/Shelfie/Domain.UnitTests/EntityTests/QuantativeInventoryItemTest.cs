@@ -14,7 +14,7 @@
             quantativeInventoryItem.QuantitativeUnit = newQuantitativeUnit;
 
             //Assert
-            Assert.IsTrue(quantativeInventoryItem.Quantity%1==0);
+            Assert.IsTrue(quantativeInventoryItem.Quantity % 1 == 0);
         }
 
         [TestCase(2, QuantitativeUnit.Meters)]
@@ -27,7 +27,7 @@
         [TestCase(2.5, QuantitativeUnit.SquareMeters)]
 
         [TestCase(2, QuantitativeUnit.Kilograms)]
-        [TestCase(2.5, QuantitativeUnit.Kilograms)] 
+        [TestCase(2.5, QuantitativeUnit.Kilograms)]
         public void QuantityStaysTheSame_WhenQuantitativeUnitChangesToNonsinglable(double initialQuantity, QuantitativeUnit newQuantitativeUnit)
         {
             //Asign
@@ -37,7 +37,7 @@
             quantativeInventoryItem.QuantitativeUnit = newQuantitativeUnit;
 
             //Assert
-            Assert.IsTrue(quantativeInventoryItem.Quantity==initialQuantity);
+            Assert.IsTrue(quantativeInventoryItem.Quantity == initialQuantity);
         }
     }
 }
