@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{492EA29C-9240-4F08-8FDF-4D267D611FE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shelfie.Application.Mapping", "Shelfie.Application.Mapping\Shelfie.Application.Mapping.csproj", "{79EA9F92-CC1E-46D2-85CE-7B128F9EDCD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{7B54D360-7A8C-4A7A-A68C-3F42C666F9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B54D360-7A8C-4A7A-A68C-3F42C666F9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B54D360-7A8C-4A7A-A68C-3F42C666F9D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79EA9F92-CC1E-46D2-85CE-7B128F9EDCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79EA9F92-CC1E-46D2-85CE-7B128F9EDCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79EA9F92-CC1E-46D2-85CE-7B128F9EDCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79EA9F92-CC1E-46D2-85CE-7B128F9EDCD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{892CB907-D88B-4A2B-AE8F-DA7E5C7C444D} = {3BA32E2F-E89C-46F1-8FF3-E52009F22276}
 		{18829391-5E29-4FFA-AC5F-B34A9FB1A835} = {492EA29C-9240-4F08-8FDF-4D267D611FE3}
 		{7B54D360-7A8C-4A7A-A68C-3F42C666F9D7} = {F5C18E3C-3DD0-4547-A88C-999B8D0A5C0F}
+		{79EA9F92-CC1E-46D2-85CE-7B128F9EDCD3} = {499814DC-5B7D-42BA-A10B-5ACA61F1CD7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C2D74E1-2913-47F3-A47D-86B1A5A316AB}
