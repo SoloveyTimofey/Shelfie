@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Shelfie.Infrastructure.Identity
 {
-    public class ApplicationUser : IdentityUser, IUser
+    public class ApplicationUser : IdentityUser
     {
     }
 }

@@ -12,8 +12,8 @@ using Shelfie.Infrastructure.Data.DbContexts;
 namespace Shelfie.Infrastructure.Migrations
 {
     [DbContext(typeof(ShelfieDbContext))]
-    [Migration("20240927162640_Initial")]
-    partial class Initial
+    [Migration("20241005114956_NewPasswordRules")]
+    partial class NewPasswordRules
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

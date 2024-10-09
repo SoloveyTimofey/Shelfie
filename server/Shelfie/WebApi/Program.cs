@@ -1,6 +1,9 @@
+using Microsoft.AspNetCore.Identity;
+using Shelfie.Application;
+using Shelfie.Application.Common.Constants;
+using Shelfie.Application.Mapping;
 using Shelfie.Infrastructure;
 using Shelfie.Infrastructure.Data.DbContexts;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,9 +21,29 @@ builder.Services.AddSwaggerGen();
 
 //});
 
-InfrastructureServicesRegistration.AddInfrastructureServices(builder.Services, builder.Configuration);
+builder.Services
+    .AddApplicationServices()
+    .AddMappingServices()
+    .AddInfrastructureServices(builder.Configuration);
 
 var app = builder.Build();
+
+//TODO: Rethink this piece of code. It's not good that Api referes to Infrastructure component so directly
+using (var serviceScope = app.Services.CreateScope())
+{
+    var services = serviceScope.ServiceProvider;
+
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+
+    var roles = ApplicationRoles.GetAllRoles();
+    foreach (var role in roles)
+    {
+        if (!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new IdentityRole(role));
+        }
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -31,6 +54,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

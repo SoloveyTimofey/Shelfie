@@ -5,7 +5,7 @@ namespace Shelfie.Application.Mapping
 {
     public static class MappingServicesRegistration
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+        public static IServiceCollection AddMappingServices(this IServiceCollection services)
         {
             services.AddAutoMapper(cfg =>
             {

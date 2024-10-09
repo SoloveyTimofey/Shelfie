@@ -1,6 +1,17 @@
-@WebApi_HostAddress = http://localhost:5043
+@WebApi_HostAddress = http://localhost:5043/api
 
 GET {{WebApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+POST {{WebApi_HostAddress}}/Account/Register
+content-type: application/json
+{
+  "userName": "user6",
+  "password": "testUser",
+  "email": "testUser@gmail.com"
+}
+
+###
+
+GET {{WebApi_HostAddress}}/Account/TestEndpoint/
