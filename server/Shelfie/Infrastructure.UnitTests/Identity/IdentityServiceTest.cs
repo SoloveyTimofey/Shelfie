@@ -96,16 +96,6 @@ namespace Infrastructure.UnitTests.Identity
             //Assert
             Assert.IsFalse(string.IsNullOrEmpty(result.Token));
         }
-
-        private void SetConfigurationFake()
-        {
-            _configuration = Substitute.For<IConfiguration>();
-
-            _configuration["JwtConfiguration:Secret"].Returns(Guid.NewGuid().ToString());
-            _configuration["JwtConfiguration:ValidIssuer"].Returns("https://localhost:7091");
-            _configuration["JwtConfiguration:ValidAudiences"].Returns("https://localhost:4200");
-            _configuration["JwtConfiguration:MinutesAfterKeyExpires"].Returns("50");
-        }
         #endregion
 
         #region Login
@@ -228,6 +218,16 @@ namespace Infrastructure.UnitTests.Identity
             _userManager.CheckPasswordAsync(Arg.Any<ApplicationUser>(), Arg.Any<string>()).Returns(false);
 
             _identityService = new IdentityService(_userManager, _configuration);
+        }
+
+        private void SetConfigurationFake()
+        {
+            _configuration = Substitute.For<IConfiguration>();
+
+            _configuration["JwtConfiguration:Secret"].Returns(Guid.NewGuid().ToString());
+            _configuration["JwtConfiguration:ValidIssuer"].Returns("https://localhost:7091");
+            _configuration["JwtConfiguration:ValidAudiences"].Returns("https://localhost:4200");
+            _configuration["JwtConfiguration:MinutesAfterKeyExpires"].Returns("50");
         }
     }
 }
