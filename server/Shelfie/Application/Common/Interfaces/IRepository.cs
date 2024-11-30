@@ -7,7 +7,8 @@ namespace Shelfie.Application.Common.Interfaces
 	{
 		IQueryable<T> GetAll<T>() where T : BaseEntity;
 		long Create<T>(T entityToCreate) where T : BaseEntity;
-		void Delete<T>(long id) where T : BaseEntity;
-		void Update<T>(long id, JsonPatchDocument<T> entityToUpdate) where T : BaseEntity;
+		void Remove<T>(T entity) where T : BaseEntity;
+		void Update<T>(long id, T entityToUpdate) where T : BaseEntity;
+		void SaveChanges();
 	}
 }

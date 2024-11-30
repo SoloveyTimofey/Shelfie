@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using Shelfie.Application.Common.Interfaces;
 using Shelfie.Infrastructure.Data.DbContexts;
 using Shelfie.Infrastructure.Identity;
+using Shelfie.Infrastructure.Repositories;
 using System.Reflection;
 using System.Text;
 
@@ -64,6 +65,8 @@ namespace Shelfie.Infrastructure
             });
 
             services.AddScoped<IIdentityService, IdentityService>();
+
+            services.AddScoped<IRepository, Repository>();
 
             return services;
         }
