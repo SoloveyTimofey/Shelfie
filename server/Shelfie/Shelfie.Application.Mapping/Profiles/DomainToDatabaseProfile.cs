@@ -13,6 +13,8 @@ namespace Shelfie.Application.Mapping.Profiles
             CreateMap<Domain.Entities.QuantativeInventoryItem, Infrastructure.Data.DatabaseModels.QuantativeInventoryItemModel>();
             CreateMap<Domain.Entities.ResponsiblePerson, Infrastructure.Data.DatabaseModels.ResponsiblePersonModel>();
             CreateMap<Domain.ValueObjects.ChangeLog, Infrastructure.Data.DatabaseModels.ChangeLogModel>();
+
+            CreateMap<Domain.Entities.InventoryItem, Dtos.InventoryItemReadDto>().ReverseMap();
         }
     }
 }

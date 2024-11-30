@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Shelfie.Application.Common.Constants;
 using Shelfie.Application.Common.Interfaces;
 using Shelfie.Application.Common.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Shelfie.Application.Common.Constants;
 
 namespace Shelfie.Infrastructure.Identity
 {
